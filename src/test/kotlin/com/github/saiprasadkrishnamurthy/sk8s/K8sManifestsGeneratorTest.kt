@@ -14,13 +14,14 @@ class K8sManifestsGeneratorTest {
 
     @org.junit.jupiter.api.Test
     fun generateManifests() {
-        val req = GenerateK8sManifestsRequest(artifactId = "demo-service",
-                version = "1.0-SNAPSHOT",
-                dockerImageName = "saiprasadkrishnamurthy/demo-service",
-                deploymentYmlTemplateFile = "deployment/service-deployment-template.yml",
-                configMapYmlTemplateFile = "deployment/configmap-template.yml",
-                outputDir = "target")
-        K8sManifestsGenerator.newInstance().generateManifests(req)
+//        val req = GenerateK8sManifestsRequest(artifactId = "demo-service",
+//                version = "1.0-SNAPSHOT",
+//                dockerImageName = "saiprasadkrishnamurthy/demo-service",
+//                deploymentYmlTemplateFile = "deployment/service-deployment-template.yml",
+//                configMapYmlTemplateFile = "deployment/configmap-template.yml",
+//                outputDir = "target",
+//                generateVersionHistory = true)
+//        K8sManifestsGenerator.newInstance().generateManifests(req)
 
     }
 }

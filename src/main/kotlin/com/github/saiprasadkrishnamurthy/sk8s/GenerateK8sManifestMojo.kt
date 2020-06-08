@@ -34,6 +34,9 @@ class GenerateK8sManifestsMojo : AbstractMojo() {
     @Parameter(property = "outputDir", defaultValue = "target/k8s")
     private lateinit var outputDir: String
 
+    @Parameter(property = "ticketPatterns", defaultValue = "")
+    private lateinit var ticketPatterns: String
+
     @Throws(MojoExecutionException::class, MojoFailureException::class)
     override fun execute() {
         if (skip) {
@@ -51,6 +54,7 @@ class GenerateK8sManifestsMojo : AbstractMojo() {
                         version = version,
                         configMapYmlTemplateFile = configMapYmlTemplateFile,
                         deploymentYmlTemplateFile = deploymentYmlTemplateFile,
+                        ticketPatterns = ticketPatterns.split(","),
                         outputDir = outputDir))
             } catch (ex: Exception) {
                 log.error(ex)
