@@ -76,7 +76,10 @@ class K8sManifestsGenerator {
             Files.writeString(Paths.get(generateK8sManifestsRequest.outputDir, "configMap$profile.yml"), configMapTemplate, Charset.defaultCharset())
         }
 
+       if(generateK8sManifestsRequest.generateVersionHistory) {
+            val historyCommand = "git log --oneline --graph --decorate --first-parent"
 
+       }
     }
 
     private fun loadProps(generateK8sManifestsRequest: GenerateK8sManifestsRequest, propsContext: PropertiesContext) {
