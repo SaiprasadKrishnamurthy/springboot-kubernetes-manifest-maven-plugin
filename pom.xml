@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.saiprasadkrishnamurthy.tools</groupId>
+    <groupId>com.github.saiprasadkrishnamurthy</groupId>
     <artifactId>springboot-kubernetes-manifest-maven-plugin</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
@@ -266,7 +266,7 @@
     <distributionManagement>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
     </distributionManagement>
     <pluginRepositories>
